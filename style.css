@@ -1,40 +1,42 @@
-/* RESET DASAR */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kontak</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="bukti-yesus.html">Bukti Yesus</a></li>
+        <li><a href="islamology.html">Islamology</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 0 15px;
-}
+  <div class="container">
+    <h2>Hubungi Kami</h2>
+    <form>
+      <label>Nama:</label><br>
+      <input type="text" style="width:100%; padding:8px; margin:5px 0;"><br>
+      <label>Email:</label><br>
+      <input type="email" style="width:100%; padding:8px; margin:5px 0;"><br>
+      <label>Pesan:</label><br>
+      <textarea style="width:100%; padding:8px; margin:5px 0;"></textarea><br>
+      <button type="submit" style="padding:10px 20px; background:#222; color:#fff; border:none; border-radius:5px;">Kirim</button>
+    </form>
+  </div>
 
-/* HEADER */
-header {
-  background: #222;
-  color: #fff;
-  padding: 20px 0;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 10px;
-  font-size: 1.8rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
+  <footer>
+    <p>© 2025 Bukti Yesus & Islamology</p>
+  </footer>
+</body>
+</html>
 nav a {
   color: #fff;
   text-decoration: none;
