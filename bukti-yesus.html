@@ -6,25 +6,6 @@
   <title>Bukti Historis Yesus</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-// Toggle menu utama
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-// Toggle dropdown di mobile
-const dropdowns = document.querySelectorAll(".dropdown");
-
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener("click", (e) => {
-    e.stopPropagation(); // cegah event bubbling
-    dropdown.classList.toggle("active");
-  });
-});
-</script>
 <body>
   <header>
     <h1>Bukti Historis Yesus</h1>
@@ -52,6 +33,25 @@ dropdowns.forEach(dropdown => {
   <footer>
     <p>© 2025 Bukti Yesus & Islamology</p>
   </footer>
+  <script>
+// Toggle menu utama
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Toggle dropdown di mobile
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener("click", (e) => {
+    e.stopPropagation(); // cegah event bubbling
+    dropdown.classList.toggle("active");
+  });
+});
+</script>
 </body>
 </html></body>
 </html>
