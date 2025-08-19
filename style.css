@@ -1,40 +1,142 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontak</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Kontak</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="bukti-yesus.html">Bukti Yesus</a></li>
-        <li><a href="islamology.html">Islamology</a></li>
-        <li><a href="contact.html">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="container">
-    <h2>Hubungi Kami</h2>
-    <form>
-      <label>Nama:</label><br>
-      <input type="text" style="width:100%; padding:8px; margin:5px 0;"><br>
-      <label>Email:</label><br>
-      <input type="email" style="width:100%; padding:8px; margin:5px 0;"><br>
-      <label>Pesan:</label><br>
-      <textarea style="width:100%; padding:8px; margin:5px 0;"></textarea><br>
-      <button type="submit" style="padding:10px 20px; background:#222; color:#fff; border:none; border-radius:5px;">Kirim</button>
-    </form>
-  </div>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-  <footer>
-    <p>© 2025 Bukti Yesus & Islamology</p>
-  </footer>
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s, background 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+  color: #ffd700;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  top: 35px;
+  left: 0;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.dropdown-content li a {
+  padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    flex-direction: column;
+    width: 220px;
+    background-color: #333;
+    transition: right 0.3s ease;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    background-color: #444;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+}  </footer>
 </body>
 </html>
 nav a {
