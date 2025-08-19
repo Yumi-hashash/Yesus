@@ -6,6 +6,25 @@
   <title>Beranda | Bukti Yesus & Islamology</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+// Toggle menu utama
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Toggle dropdown di mobile
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener("click", (e) => {
+    e.stopPropagation(); // cegah event bubbling
+    dropdown.classList.toggle("active");
+  });
+});
+  </script>
 <body>
   <!-- Navbar -->
   <header>
